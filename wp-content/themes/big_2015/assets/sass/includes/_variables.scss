@@ -1,0 +1,85 @@
+/*Theme colors, fonts, and patterns
+
+*Table of Contents
+
+*Theme Colors
+  --Primary
+  --Variations
+
+*Typography
+  --Base size
+  --Fonts
+  --Defaults
+
+*/
+
+/*
+Theme Colors
+*/
+//Primary
+$primaryColor: #252525;
+$secondaryColor: #252525;
+$tertiaryColor: #252525;
+$accentColor: #252525; 
+$lightGray: #252525;
+
+//Variations
+$primaryAlt: darken(#252525,10);
+$secondaryAlt: darken(#252525,10);
+$secondaryLight: #252525;
+$tertiaryAlt: darken(#252525,10);
+$accentAlt: darken(#252525,10);
+
+/*
+Typography
+*/
+//Base Size
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+//time
+$time: 0.2s;
+
+//Spacing 
+$margin: em(60px);
+$font-header: sans-serif;
+$font-nav: sans-serif;
+$font-body: sans-serif;
+
+h1, h2 { 
+
+}
+
+h3 {
+
+}
+
+a{
+    cursor: pointer !important; 
+}
+a, svg {
+    @include transition(all $time ease-in-out);
+}
+.transition{
+    @include transition(all $time ease-in-out);
+}
+
+::-webkit-input-placeholder {
+   color: transparentize($secondaryColor, 0.5);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: transparentize($secondaryColor, 0.5);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: transparentize($secondaryColor, 0.5);  
+}
+
+:-ms-input-placeholder {  
+   color: transparentize($secondaryColor, 0.5);  
+}
+
+//Patterns
