@@ -1,45 +1,56 @@
-//Bourbon Grid (wrap each section in <section> tags and add class col-# to inner divs)
-// section {
-//     @include outer-container;
-//     max-width: 100% !important;
-// }
-// .col-11 {
-//     @include span-columns(11);
-// }
-// .col-10 {
-//     @include span-columns(10);
-// }
-// .col-9 {
-//     @include span-columns(9);
-// }
-// .col-8 {
-//     @include span-columns(8);
-// }
-// .col-7 {
-//     @include span-columns(7);
-// }
-// .col-6 {
-//     @include span-columns(6);
-// }
-// .col-5 {
-//     @include span-columns(5);
-// }
-// .col-4 {
-//     @include span-columns(4);
-// }
-// .col-3 {
-//     @include span-columns(3);
-// }
-// .col-2 {
-//     @include span-columns(2);
-// }
-// .col-1 {
-//     @include span-columns(1); 
-// }
-
-//Hotfix for bourbon layout
-// .col-2:nth-of-type(2n),
-// .col-4:nth-of-type(3n),
-// .col-3:nth-of-type(4n) {
-//     margin-right: 0;
-// }
+.footer__wrap{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.call-us,
+.quick__find{
+	width: 50%;
+	display: inline-block;
+	flex: auto;
+	vertical-align: middle;
+	margin: 0;
+}
+.call-us{
+	border-right: 2px dotted #fff;
+	p{
+		b,
+		span{
+			font-family: $secondaryFont;
+			display: block;
+		}
+		b{
+			font-size: em(28);
+			font-weight: 400;
+			line-height: 1.5em;
+			text-transform: uppercase;
+		}
+		span{
+			font-size: em(14);
+			text-transform: uppercase;
+		}
+	}
+}
+.quick__find{
+	p,
+	div,
+	a{
+		font-family: $secondaryFont;
+		display: inline;
+	}
+	p,
+	div{
+		font-size: em(28);
+	}
+	div{
+		color: #2b2b2b;
+		border-bottom: 2px dotted #fff;
+		margin-left: 10px;
+	}
+}
+.button--qf{
+	background-color: #000 !important;
+	padding: 10px 25px;
+	margin-left: 20px;
+	text-decoration: none;
+}

@@ -1,0 +1,11 @@
+nav[role=navigation]{
+	float: right;
+	li{
+		display: inline;
+		a{
+			font-family: $secondaryFont;
+			color: #fff;
+			text-transform: uppercase;
+		}
+	}
+}

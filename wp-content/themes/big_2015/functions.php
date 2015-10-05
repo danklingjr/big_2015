@@ -24,8 +24,13 @@ function elog($x){
 
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
-  register_nav_menu( 'nav_main', __( 'Wireless Technologies Nav', 'theme-slug' ) );
+  register_nav_menu( 'nav_main', __( 'Main Nav', 'theme-slug' ) );
 }
+
+function register_wireless_menu() {
+    register_nav_menu('wireless-sub', __('Wireless Development Nav'));
+}
+add_action('init', 'register_wireless_menu');
 
 function register_software_menu() {
     register_nav_menu('software-sub', __('Software Development Nav'));

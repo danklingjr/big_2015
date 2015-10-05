@@ -17,18 +17,18 @@
 Theme Colors
 */
 //Primary
-$primaryColor: #252525;
-$secondaryColor: #252525;
-$tertiaryColor: #252525;
-$accentColor: #252525; 
-$lightGray: #252525;
+$primaryColor: #88c541; //Green
+$secondaryColor: #4ea699; //Blue green
+// $tertiaryColor: #252525;
+// $accentColor: #252525; 
+// $lightGray: #252525;
 
 //Variations
-$primaryAlt: darken(#252525,10);
-$secondaryAlt: darken(#252525,10);
-$secondaryLight: #252525;
-$tertiaryAlt: darken(#252525,10);
-$accentAlt: darken(#252525,10);
+$primaryAlt: darken(#88c541,10);
+$secondaryAlt: darken(#4ea699,10);
+// $secondaryLight: #252525;
+// $tertiaryAlt: darken(#252525,10);
+// $accentAlt: darken(#252525,10);
 
 /*
 Typography
@@ -39,6 +39,12 @@ $browser-context: 16; // Default
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
+
+//Fonts
+$primaryFont: 'Lato', sans-serif;
+$secondaryFont: 'Montserrat', sans-serif;
+$tertiaryFont: 'Open Sans', sans-serif;
+
 //time
 $time: 0.2s;
 

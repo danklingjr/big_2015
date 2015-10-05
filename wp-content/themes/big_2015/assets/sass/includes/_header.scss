@@ -1,45 +1,50 @@
-//Bourbon Grid (wrap each section in <section> tags and add class col-# to inner divs)
-// section {
-//     @include outer-container;
-//     max-width: 100% !important;
-// }
-// .col-11 {
-//     @include span-columns(11);
-// }
-// .col-10 {
-//     @include span-columns(10);
-// }
-// .col-9 {
-//     @include span-columns(9);
-// }
-// .col-8 {
-//     @include span-columns(8);
-// }
-// .col-7 {
-//     @include span-columns(7);
-// }
-// .col-6 {
-//     @include span-columns(6);
-// }
-// .col-5 {
-//     @include span-columns(5);
-// }
-// .col-4 {
-//     @include span-columns(4);
-// }
-// .col-3 {
-//     @include span-columns(3);
-// }
-// .col-2 {
-//     @include span-columns(2);
-// }
-// .col-1 {
-//     @include span-columns(1); 
-// }
-
-//Hotfix for bourbon layout
-// .col-2:nth-of-type(2n),
-// .col-4:nth-of-type(3n),
-// .col-3:nth-of-type(4n) {
-//     margin-right: 0;
-// }
+.site-header{
+	.wrap{
+		padding: 0;
+	}
+}
+.home{
+	.site-header{
+		.wrap{
+			padding: 10px 5% 15px;
+		}
+	}
+}
+.branding{
+	display: inline-block;
+	width: 500px;
+	svg{
+		width: 155px;
+		float: left;
+	}
+	p{
+		display: inline-block;
+		margin: 15px 0 0 10px;
+		margin-bottom: 0;
+		font-family: $secondaryFont;
+		font-size: em(13);
+		font-weight: 400;
+		line-height: 1.2em;
+		color: #fff;
+		text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	}
+}
+.gateway__remote{
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translatey(-50%);
+	font-family: $secondaryFont;
+	font-size: em(15);
+	font-weight: 400;
+	line-height: 1.2em;
+	color: #fff;
+	text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	text-decoration: none;
+	text-transform: uppercase;
+	&:hover,
+	&:focus{
+		color: #fff;
+		text-decoration: underline;
+	}
+}
