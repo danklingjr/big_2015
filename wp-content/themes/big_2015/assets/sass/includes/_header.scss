@@ -1,14 +1,35 @@
 .site-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
 	.wrap{
 		padding: 0;
 	}
 }
-.home{
-	.site-header{
-		.wrap{
-			padding: 10px 5% 15px;
+.site-header{
+	background-color: #fff;
+	min-height: auto;
+	.wrap{
+		padding: 10px 2.5% 15px;
+		@media screen and (min-width: em(1280)){
+			padding: 10px 10% 15px;
 		}
 	}
+}
+.home{
+	.site-header{
+		background-color: rgba(255,255,255,0.4);
+		min-height: auto;
+		.wrap{
+			padding: 10px 2.5% 15px;
+			@media screen and (min-width: em(1280)){
+				padding: 10px 10% 15px;
+			}
+		}
+	}
+	
 }
 .branding{
 	display: inline-block;
@@ -27,6 +48,25 @@
 		line-height: 1.2em;
 		color: #fff;
 		text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+	}
+}
+.branding--page{
+	display: inline-block;
+	width: 500px;
+	svg{
+		width: 135px;
+		float: left;
+	}
+	p{
+		display: inline-block;
+		margin: 10px 0 0 10px;
+		margin-bottom: 0;
+		font-family: $secondaryFont;
+		font-size: em(13);
+		font-weight: 400;
+		line-height: 1.2em;
+		color: #000;
+		text-shadow: none;
 	}
 }
 .gateway__remote{

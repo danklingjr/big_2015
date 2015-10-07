@@ -1,4 +1,4 @@
-nav[role=navigation]{
+.home nav[role=navigation]{
 	float: right;
 	li{
 		display: inline;
@@ -6,6 +6,21 @@ nav[role=navigation]{
 			font-family: $secondaryFont;
 			color: #fff;
 			text-transform: uppercase;
+		}
+	}
+}
+nav[role=navigation]{
+	float: right;
+	margin-top: 12px;
+	li{
+		display: inline;
+		margin-left: 10px;
+		a{
+			font-size: em(12);
+			font-family: $secondaryFont;
+			color: #000;
+			text-transform: uppercase;
+			text-decoration: none;
 		}
 	}
 }

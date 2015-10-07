@@ -20,7 +20,8 @@ function big_do_header()
 {
 ?>
 
-<div class="branding clearfix">
+
+<div class="branding <?php if(!is_page('4')){ ?>branding--page<?php } ?> clearfix">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 155.8 60" enable-background="new 0 0 155.8 60" xml:space="preserve">
     <g>
@@ -47,14 +48,14 @@ function big_do_header()
     <p>Business Information Group, Inc.<br>BIG Wireless, LLC</p>
 
 </div>
-<a href="" class="gateway__remote">Remote Support</a>
+<?php if(is_page('4')){ ?><a href="" class="gateway__remote">Remote Support</a><?php } ?>
 
 
 <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-    <!--<?php wp_nav_menu( array( 'theme_location' => 'nav_main' ) ); ?>-->
-    <ul>
-        <li><a href=""></a></li>
-    </ul>
+
+    <?php if (is_tree(6)) {?>
+    <?php wp_nav_menu( array( 'theme_location' => 'wireless-sub' ) ); ?>
+    <?php } ?>
 </nav>
 
 

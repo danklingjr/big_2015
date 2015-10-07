@@ -28,7 +28,7 @@ function register_my_menu() {
 }
 
 function register_wireless_menu() {
-    register_nav_menu('wireless-sub', __('Wireless Development Nav'));
+    register_nav_menu('wireless-sub', __('Wireless Technologies Nav'));
 }
 add_action('init', 'register_wireless_menu');
 
@@ -41,3 +41,11 @@ function register_networking_menu() {
     register_nav_menu('networking-sub', __('Networking Nav'));
 }
 add_action('init', 'register_networking_menu');
+
+function is_tree($pid) {      // $pid = The ID of the page we're looking for pages underneath
+	global $post;         // load details about this page
+	if(is_page()&&($post->post_parent==$pid||is_page($pid))) 
+               return true;   // we're at the page or at a sub page
+	else 
+               return false;  // we're elsewhere
+};

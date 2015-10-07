@@ -89,3 +89,21 @@ a, svg {
 }
 
 //Patterns
+.button{
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    span{
+        margin-left: 20px;
+        font-size: em(20);
+        line-height: 0;
+    }
+}
+.button--black{
+    color: #fff;
+    background-color: #000 !important;
+}
+.button--qf{
+    color: #fff;
+}
