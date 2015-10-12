@@ -51,45 +51,45 @@ function site_content()
 {
 ?>
 
-<section class="partners group">
+<section class="solutions group">
 	<div class="partners__wrap group">
-		<div class="partner group">
-			<figure class="partner__logo">
+		<div class="solution group">
+			<figure class="solution__logo">
 				<img src="" alt="">
 			</figure>
-			<div class="partner__text">
+			<div class="solution__text">
+				<h3>Design</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-				<p>Aliquam sit amet vehicula nisl. Proin dictum iaculis libero, non tempor arcu facilisis in. Quisque non ullamcorper elit. Sed sollicitudin, risus ac vestibulum accumsan, nisi ipsum suscipit metus, et ultricies dolor elit eu mauris.</p>
 			</div>
 		</div>
 
-		<div class="partner group">
-			<figure class="partner__logo">
+		<div class="solution group">
+			<figure class="solution__logo">
 				<img src="" alt="">
 			</figure>
-			<div class="partner__text">
+			<div class="solution__text">
+				<h3>Engineer</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-				<p>Aliquam sit amet vehicula nisl. Proin dictum iaculis libero, non tempor arcu facilisis in. Quisque non ullamcorper elit. Sed sollicitudin, risus ac vestibulum accumsan, nisi ipsum suscipit metus, et ultricies dolor elit eu mauris.</p>
 			</div>
 		</div>
 
-		<div class="partner group">
-			<figure class="partner__logo">
+		<div class="solution group">
+			<figure class="solution__logo">
 				<img src="" alt="">
 			</figure>
-			<div class="partner__text">
+			<div class="solution__text">
+				<h3>Install</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-				<p>Aliquam sit amet vehicula nisl. Proin dictum iaculis libero, non tempor arcu facilisis in. Quisque non ullamcorper elit. Sed sollicitudin, risus ac vestibulum accumsan, nisi ipsum suscipit metus, et ultricies dolor elit eu mauris.</p>
 			</div>
 		</div>
 
-		<div class="partner group">
-			<figure class="partner__logo">
+		<div class="solution group">
+			<figure class="solution__logo">
 				<img src="" alt="">
 			</figure>
-			<div class="partner__text">
+			<div class="solution__text">
+				<h3>Maintain</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-				<p>Aliquam sit amet vehicula nisl. Proin dictum iaculis libero, non tempor arcu facilisis in. Quisque non ullamcorper elit. Sed sollicitudin, risus ac vestibulum accumsan, nisi ipsum suscipit metus, et ultricies dolor elit eu mauris.</p>
 			</div>
 		</div>
 

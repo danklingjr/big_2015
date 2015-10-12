@@ -42,7 +42,7 @@ function site_content()
 				<h2>Wireless Technologies</h2>
 				<p>From bandwidth analysis tools to harnesses, from spectrum analyzers to bucket trucks, we have all the tools and skills to handle even the largest wireless engineering projects.</p>
 			</div>
-			<a href="" class="button">Learn More ></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>wireless-technologies" class="button">Learn More ></a>
 		</div>
 		
 	</div>
@@ -52,7 +52,7 @@ function site_content()
 				<h2>Networking &amp; Security</h2>
 				<p>Our Network &amp; Security Team can provide a multitude of IT services for all levels of business, from small to large. </p>
 			</div>
-			<a href="" class="button">Learn More ></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>networking-security" class="button">Learn More ></a>
 		</div>
 		
 	</div>
@@ -62,7 +62,7 @@ function site_content()
 				<h2>Software Development</h2>
 				<p>Our Software Development team can provide a brand new application to meet your specifications, or implement new processes within an existing application.</p>
 			</div>
-			<a href="" class="button">Learn More ></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>software-development" class="button">Learn More ></a>
 		</div>
 		
 	</div>

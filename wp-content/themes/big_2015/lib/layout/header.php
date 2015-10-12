@@ -22,6 +22,7 @@ function big_do_header()
 
 
 <div class="branding <?php if(!is_page('4')){ ?>branding--page<?php } ?> clearfix">
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 155.8 60" enable-background="new 0 0 155.8 60" xml:space="preserve">
     <g>
@@ -44,7 +45,7 @@ function big_do_header()
             L125.6,2.8z M60.9,41c0,0,0,7.9,0,9.4c0,1.5,1.9,2.2,3.4,0.7c1.5-1.5,3.2-7.3,0.6-10.3C62.4,37.8,60.9,39.5,60.9,41L60.9,41z
              M64.8,29.8c1.2-2.2,1.2-5.7-0.9-7c-2.1-1.3-2.6-0.7-2.6,0.4c0,0,0,5.6,0,7.3C61.3,32.1,63.6,32,64.8,29.8L64.8,29.8z"/>
     </g>
-    </svg>
+    </svg></a>
     <p>Business Information Group, Inc.<br>BIG Wireless, LLC</p>
 
 </div>
