@@ -11,10 +11,11 @@
 .site-header{
 	background-color: #fff;
 	min-height: auto;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
 	.wrap{
-		padding: 10px 2.5% 15px;
+		padding: 0 0 0 2.5%;
 		@media screen and (min-width: em(1280)){
-			padding: 10px 10% 15px;
+			padding: 0 0 0 2.5%;
 		}
 	}
 }
@@ -22,18 +23,19 @@
 	.site-header{
 		background-color: rgba(255,255,255,0.4);
 		min-height: auto;
+		box-shadow: none;
 		.wrap{
-			padding: 10px 2.5% 15px;
+			padding: 10px 0 15px 2.5%;
 			@media screen and (min-width: em(1280)){
-				padding: 10px 10% 15px;
+				padding: 10px 0 15px 2.5%;
 			}
 		}
 	}
-	
 }
 .branding{
 	display: inline-block;
 	width: 500px;
+	padding-top: 8px;
 	svg{
 		width: 155px;
 		float: left;

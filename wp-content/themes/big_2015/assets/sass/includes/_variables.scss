@@ -19,7 +19,7 @@ Theme Colors
 //Primary
 $primaryColor: #88c541; //Green
 $secondaryColor: #4ea699; //Blue green
-// $tertiaryColor: #252525;
+$tertiaryColor: #5d5d5d;
 // $accentColor: #252525; 
 // $lightGray: #252525;
 
@@ -98,6 +98,10 @@ a, svg {
         margin-left: 20px;
         font-size: em(20);
         line-height: 0;
+    }
+    &:hover,
+    &:focus{
+        background-color: darken($primaryColor, 10);
     }
 }
 .button--black{

@@ -55,6 +55,15 @@ function big_do_header()
 
     <?php if (is_tree(6)) {?>
     <?php wp_nav_menu( array( 'theme_location' => 'wireless-sub' ) ); ?>
+    <?php } else if (is_tree(8)) {?>
+    <?php wp_nav_menu( array( 'theme_location' => 'networking-sub' ) ); ?>
+    <?php } else if (is_tree(10)) {?>
+    <?php wp_nav_menu( array( 'theme_location' => 'software-sub' ) ); ?>
+    <?php } ?>
+    <?php if(!is_page('4')){ ?>
+    <a href="" class="nav__actions action--careers">Careers</a>
+    <a href="" class="nav__actions action--help-desk">Help<br>Desk</a>
+    <a href="" class="nav__actions action--remote">Remote<br>Support</a>
     <?php } ?>
 </nav>
 

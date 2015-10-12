@@ -1,5 +1,6 @@
 .site-footer{
 	background: none;
+	padding: em(55) 0;
 }
 .footer__wrap{
 	display: flex;
@@ -118,14 +119,97 @@ div.dropdown__service{
 .call-today{
 	text-align: left;
 	h3{
+		font-family: $secondaryFont;
 		color: #fff;	
 	}
 	p{
+		font-family: $secondaryFont;
 		color: $primaryColor;
 	}
 }
 .social__section{
 	text-align: left;
+}
+.social--icons{
+	margin-bottom: em(30);
+	span,
+	a{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	a{
+		color: #fff;
+		text-decoration: none;
+	}
+	span{
+		font-family: $secondaryFont;
+		font-size: em(24);
+		color: #fff;
+		text-transform: uppercase;
+		margin-right: 20px;
+	}
+}
+.newsletter-signup{
+	label{
+		display: block;
+		font-family: $secondaryFont;
+		font-size: em(16);
+		color: #fff;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+}
+.input--wrap{
+	position: relative;
+	::-webkit-input-placeholder{
+			color: #fff;
+		}
+	input,button{
+		padding: 10px;
+		height: 50px;
+		line-height: 1em;
+		margin: 0;
+	}
+	input[type="text"]{
+		width: 65%;
+		background-color: #000;
+		border-left: 2px solid #fff;
+		border-top: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		border-right: none;
+		color: #fff;
+
+	}
+	*[type="submit"]{
+		position: absolute;
+		right: 0;
+		background-color: $primaryColor;
+		height: 50px;
+		width: 35%;
+		color: #000;
+	}
+}
+.footer__address{
+
+}
+.address--block{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	.map{
+		background-color: #ccc;
+		background-image: url(../images/map-bg.jpg);
+		background-size: cover;
+		background-position: center;
+		width: 33.333333%;
+
+	}
+	.address{
+		width: 66.666666%;
+		background-color: $primaryColor;
+		padding: em(20);
+	}
 }
 
 

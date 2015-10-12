@@ -11,16 +11,86 @@
 }
 nav[role=navigation]{
 	float: right;
-	margin-top: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 	li{
-		display: inline;
-		margin-left: 10px;
+		display: inline-block;
+		margin-right: 10px;
+		padding: 0 0 5px 0;
 		a{
 			font-size: em(12);
 			font-family: $secondaryFont;
 			color: #000;
 			text-transform: uppercase;
 			text-decoration: none;
+			padding: 0 0 5px 0;
 		}
 	}
 }
+
+.menu-wireless-technologies-menu-container{
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav__actions{
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	vertical-align: middle;
+	font-size: em(11);
+	font-family: $secondaryFont;
+	line-height: 1.0em;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 8px;
+}
+.action--careers{
+	background-color: $secondaryColor;
+}
+.action--help-desk{
+	background-color: $primaryColor;
+}
+.action--remote{
+	background-color: $tertiaryColor;
+}
+.menu-item-has-children{
+	position: relative;
+
+}
+.sub-menu{
+	display: none;
+	width: 260px;
+	position: absolute;
+	left: -20px;
+	border-top: none !important;
+	background-color: #fff;
+	font-size: em(14);
+	li{
+		display: block !important;
+		line-height: 1em;
+		margin: 0 !important;
+		padding: 0 !important;
+		a{
+			display: block !important;
+			padding: 10px 20px !important;
+			&:hover,
+			&:focus{
+				background-color: $secondaryColor;
+				color: #fff;
+			}
+		}
+	}
+}
+.menu-item-has-children:hover,
+.menu-item-has-children:focus{
+	.sub-menu{
+		display: block;
+	}
+}
+
