@@ -51,7 +51,7 @@ function site_content()
 {
 ?>
 
-<section class="news group">
+<section class="news--page group">
 	<div class="news__wrap col-9 group">
 		<article class="news--article">
 			<time datetime="">April 01 2015</time>

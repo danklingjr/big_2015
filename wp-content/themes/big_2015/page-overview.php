@@ -69,17 +69,78 @@ function site_content()
 	</div>
 
 	<div class="overview__announcements group">
+		<?php 
+		// $post_list = array(50,56,44,54,48,46,52);
+		query_posts(array(
+		    'showposts' => 1, 
+		    'order' => 'DESC',
+		    'post_type' => 'post')); 
+		while (have_posts()) { the_post(); 
+		?>
 		<div class="news overview--news col-3">
 			<time datetime="">April 01 2015</time>
-			<h3>BIG Announces Expansion</h3>
-			<p>BIG today announced it will be leading a formal business affiliation and begin servicing clients of Star Systems Engineering, Inc. (Star Systems), York, Pennsylvania.</p>
-			<a href="" class="button">Read More <span class="arrow">&rsaquo;</span></a>
+			<h3><?php the_title(); ?></h3>
+			<?php the_content(); ?>
+			<a href="<?php the_permalink(); ?>" class="button">Read More <span class="arrow">&rsaquo;</span></a>
 		</div>
+		<?php } ?>
+		<?php wp_reset_query(); ?>
 		<div class="testimonials overview--testimonials col-6">
-			<h2>What our customers are saying</h2>
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut maximus magna. Vestibulum eu orci velit. Ut vel risus mollis est ullamcorper dignissim a in."</p>
-			<b>- Chris' Italian Meatballs -</b>
-			<i>Company Name</i>
+		<h2>What our customers are saying</h2>
+		<div class="testimonial__wrap">
+		<?php if(is_page('6')){ ?>
+			<?php 
+			// $post_list = array(50,56,44,54,48,46,52);
+			query_posts(array(
+			    'showposts' => 3, 
+			    'cat' => 5,
+			    'post_type' => 'testimonial')); 
+			while (have_posts()) { the_post(); 
+			?>
+			<div class="testimonial">
+				
+				<?php the_content(); ?>
+				<b>- <?php the_title(); ?> -</b>
+				<i><?php the_field('company_name'); ?></i>
+			</div>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		<?php }else if(is_page('8')){?>
+			<?php 
+			// $post_list = array(50,56,44,54,48,46,52);
+			query_posts(array(
+			    'showposts' => 3, 
+			    'cat' => 7,
+			    'post_type' => 'testimonial')); 
+			while (have_posts()) { the_post(); 
+			?>
+			<div class="testimonial">
+				<h2>What our customers are saying</h2>
+				<?php the_content(); ?>
+				<b>- <?php the_title(); ?> -</b>
+				<i><?php the_field('company_name'); ?></i>
+			</div>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		<?php }else if(is_page('10')){?>
+			<?php 
+			// $post_list = array(50,56,44,54,48,46,52);
+			query_posts(array(
+			    'showposts' => 3, 
+			    'cat' => 6,
+			    'post_type' => 'testimonial')); 
+			while (have_posts()) { the_post(); 
+			?>
+			<div class="testimonial">
+				<h2>What our customers are saying</h2>
+				<?php the_content(); ?>
+				<b>- <?php the_title(); ?> -</b>
+				<i><?php the_field('company_name'); ?></i>
+			</div>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		<?php }?>
+		</div>
 		</div>
 		<div class="careers overview--careers col-3">
 			<h3>We're Hiring</h3>
@@ -92,6 +153,18 @@ function site_content()
 <section class="overview__partners group">
 	<h2>Our Trusted Wireless Partners Include:</h2>
 	<div class="partner__wrap group">
+		<figure class="partner--logo">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
+		</figure>
+		<figure class="partner--logo">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
+		</figure>
+		<figure class="partner--logo">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
+		</figure>
+		<figure class="partner--logo">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
+		</figure>
 		<figure class="partner--logo">
 			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
 		</figure>

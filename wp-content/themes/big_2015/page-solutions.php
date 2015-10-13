@@ -53,17 +53,25 @@ function site_content()
 
 <section class="solutions group">
 	<div class="partners__wrap group">
+	<?php 
+		if (have_rows('solution')): 
+		while(have_rows('solution')): the_row();
+	?>
 		<div class="solution group">
 			<figure class="solution__logo">
-				<img src="" alt="">
+				<?php the_sub_field('icon'); ?>
 			</figure>
 			<div class="solution__text">
-				<h3>Design</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
+				<h3><?php the_sub_field('title'); ?></h3>
+				<?php the_sub_field('text'); ?>
 			</div>
 		</div>
+	<?php 
+		endwhile;
+		endif;
+	?>
 
-		<div class="solution group">
+		<!-- <div class="solution group">
 			<figure class="solution__logo">
 				<img src="" alt="">
 			</figure>
@@ -91,7 +99,7 @@ function site_content()
 				<h3>Maintain</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
 			</div>
-		</div>
+		</div> -->
 
 
 	</div>

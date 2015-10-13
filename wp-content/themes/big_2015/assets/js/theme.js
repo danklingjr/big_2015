@@ -12,6 +12,8 @@
 global.jQuery = require( '../../../../../bower_components/jquery/dist/jquery.min.js' );
 var $ = jQuery;
 
+var owlcar = require('../../../../../bower_components/owlcar/owl-carousel/owl.carousel.js');
+
 // other examples
 //var foo = require( './foo.js' );
 //var bar = require( 'bar' );
@@ -19,3 +21,42 @@ var $ = jQuery;
 /**
  * Place Your Code Here
  */
+
+
+$(document).ready(function() {
+
+	// var owl = $(".owl-demo");
+
+	// owl.owlCarousel({
+
+	// items : 3, //10 items above 1000px browser width
+	// itemsDesktop : [1000,3], //5 items between 1000px and 901px
+	// itemsDesktopSmall : [1024,2], // 3 items betweem 900px and 601px
+	// itemsTablet: [980,1], //2 items between 600 and 0;
+	// itemsMobile : [600,1] // itemsMobile disabled - inherit from itemsTablet option
+
+	// });
+
+	// Custom Navigation Events
+	// $(".next").click(function(){
+	// owl.trigger('owl.next');
+	// })
+	// $(".prev").click(function(){
+	// owl.trigger('owl.prev');
+	// })
+	// $(".play").click(function(){
+	// owl.trigger('owl.play',1000);
+	// })
+	// $(".stop").click(function(){
+	// owl.trigger('owl.stop');
+	// })
+	
+	$('.partner__wrap').owlCarousel();
+	$('.testimonial__wrap').owlCarousel({
+		items : 1,
+		itemsMobile : [600,1],
+		pagination : true,
+		paginationNumbers: false,
+	});
+
+});

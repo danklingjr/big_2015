@@ -459,7 +459,7 @@ body{
 	padding: 60px 10%;
 }
 .partner--logo{
-	width: 16.666666%;
+	width: 100%;
 	margin: 0;
 	padding: 10px;
 	text-align: center;
@@ -716,9 +716,11 @@ body{
 	padding: em(40) 0;
 	.solution__logo{
 		width: 20%;
-		height: 200px;
 		margin: 0;
-		background-color: #ccc;
+		text-align: center;
+		svg{
+			max-width: 200px;
+		}
 	}
 	.solution__text{
 		width: 80%;
@@ -842,7 +844,7 @@ body{
 	}
 }
 
-.news{
+.news--page{
 	background-color: #fff;
 	padding: em(60) 10%;
 }

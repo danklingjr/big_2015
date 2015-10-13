@@ -29,6 +29,11 @@ function hero_content()
 <div class="header__push">
 	
 </div>
+<?php 
+$featured_id = get_post_thumbnail_id();
+$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
+$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
+?>
 <section class="hero hero--page">
 	<div>
 		<h1>
@@ -46,32 +51,31 @@ function site_content()
 ?>
 
 <section class="industry__overview group">
-	<h2><b>BIG</b> has the IT experience</h2>
-	<p>BIG has the IT experience and knowledge that allows hundreds of users in construction firms and their materials and manufacturing facilities to stay connected. BIG technicians have integrated custom and third-party applications in a terminal server environment.</p>
-
-	<h2><b>BIG</b> knows mobile</h2>
-	<p>Integrated mobile devices allow users from all companies to be in touch from numerous field locations, 24 hours a day. BIG staff configures connectivity and management of clients, both locally and at remote offices, using a variety of tools including Symantec antivirus central management. BIG sets up, configures, and upgrades dozens of physical and virtual servers as they reach end-of-life or more capacity is needed. Mission critical data is replicated off-site at a disaster recovery location.</p>
+	<?php the_content(); ?>
 </section>
 
 <section class="industry__details group">
 	<div class="industry__items group">
 		<div class="item--wrap">
-			<p>BIG has established a regimen of network audits that provide these 
-	organizations with information including, but not limited to:</p>
-			<ul>
-				<li>An overview of network status and usage</li>
-				<li>Basic workstation information such as install date and software versions</li>
-				<li>Current details of server share permissions</li>
-				<li>Antivirus signature updates</li>
-				<li>Printer usage</li>
-			</ul>
+			<?php the_field('details_text'); ?>
 		</div>
 	</div>
-	<div class="industry__graphic group" style="background-image: url();">
+	<?php 
+	
+	?>
+	
+	<div class="industry__graphic group" style="background-image: url(<?php the_field('details_graphic'); ?>);">
 		
 	</div>
+
 </section>
-<a href="" class="industry__cta">
+<?php if (is_tree(6)) {?>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>wireless-technologies/solutions" class="industry__cta">
+<?php } else if (is_tree(8)) {?>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>networking-security/solutions" class="industry__cta">
+<?php } else if (is_tree(10)) {?>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>software-development/solutions" class="industry__cta">
+<?php } ?>
 	<?php 
 	$page = get_queried_object();
 	$parent_title = get_the_title($page->post_parent);
