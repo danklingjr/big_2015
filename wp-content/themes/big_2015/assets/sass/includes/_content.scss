@@ -157,7 +157,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	h2{
+	h1,h2{
 
 		font-family: $primaryFont;
 		span{
@@ -207,7 +207,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	h2{
+	h1,h2{
 		font-family: $primaryFont;
 		span{
 			display: block;
