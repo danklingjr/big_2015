@@ -3,6 +3,11 @@
 	background-image: url(../images/BIG-Pattern-02.jpg);
 	padding: em(40) 0;
 }
+.home{
+	.site-footer{
+		background-image: none;
+	}
+}
 .footer__wrap{
 	display: flex;
 	flex-direction: row;
