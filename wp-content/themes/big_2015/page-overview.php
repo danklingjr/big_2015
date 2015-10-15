@@ -29,45 +29,40 @@ function hero_content()
 <div class="header__push">
 	
 </div>
-<?php 
-$featured_id = get_post_thumbnail_id();
-$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
-$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
-?>
-<section class="hero overview-slider hero--overview">
-	<div class="slide" style="background-image: url(<?php echo $featured_large[0]; ?>);">
+
+<section class="hero overview-slider hero--page">
+	<?php
+	if(have_rows('slide')):
+	while(have_rows('slide')): the_row();
+	$image = get_sub_field('slide_image');
+	if( !empty($image) ):
+	$url = $image['url'];
+	$title = $image['title'];
+	$alt = $image['alt'];
+	$caption = $image['caption'];
+
+	// thumbnail
+	$size = 'full';
+	$thumb = $image['sizes'][ $size ];
+	$width = $image['sizes'][ $size . '-width' ];
+	$height = $image['sizes'][ $size . '-height' ];
+	?>
+	<div class="slide" style="background-image: url(<?php echo $thumb; ?>);">
 		<div>
-		<h1>
-			<span>There's A</span>
+		<h2>
+			<!-- <span>There's A</span>
 			<b>BIG</b>
-			<span>Difference</span>
-		</h1>
+			<span>Difference</span> -->
+			<b><?php  ?></b>
+		</h2>
 
 		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
 		</div>
 	</div>
-	<div class="slide" style="background-image: url(<?php echo $featured_large[0]; ?>);">
-		<div>
-		<h1>
-			<span>There's A</span>
-			<b>BIG</b>
-			<span>Difference</span>
-		</h1>
-
-		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
-		</div>
-	</div>
-	<div class="slide" style="background-image: url(<?php echo $featured_large[0]; ?>);">
-		<div>
-		<h1>
-			<span>There's A</span>
-			<b>BIG</b>
-			<span>Difference</span>
-		</h1>
-
-		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
-		</div>
-	</div>
+	<?php
+	endwhile;
+	endif;
+	?>
 </section>
 
 <?php
@@ -93,9 +88,10 @@ function site_content()
 			<p>Contact Big <span class="arrow">&rsaquo;</span></p>
 		</div>
 		<div class="request__eval col-9">
-			<p><span>NOT SURE WHAT TYPE OF HELP YOU NEED?</span>
-			<span>Request and evaluation now <span class="arrow">&rsaquo;</span></span></p>
-			
+			<p>
+				<span>NOT SURE WHAT TYPE OF HELP YOU NEED?</span>
+				<span>Request and evaluation now <span class="arrow">&rsaquo;</span></span>
+			</p>
 		</div>
 	</div>
 	<div class="contact__dropdown--form group">

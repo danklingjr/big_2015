@@ -157,7 +157,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	h1{
+	h2{
 
 		font-family: $primaryFont;
 		span{
@@ -207,7 +207,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	h1{
+	h2{
 		font-family: $primaryFont;
 		span{
 			display: block;
@@ -271,7 +271,7 @@ body{
 	}
 }
 .service__main{
-	background-image: url(../images/BIG-pattern-02.jpg);
+	background-image: url(../images/BIG-Pattern-02.jpg);
 	padding: 0 2.5%;
 	margin-top: -20px;
 	@media screen and (min-width: em(960)){
