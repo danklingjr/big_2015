@@ -30,7 +30,7 @@ function hero_content()
 	
 </div>
 
-<section class="hero overview-slider hero--page">
+<section class="hero overview-slider hero--overview">
 	<?php
 	if(have_rows('slide')):
 	while(have_rows('slide')): the_row();
