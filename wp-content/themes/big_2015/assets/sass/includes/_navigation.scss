@@ -67,9 +67,9 @@ nav[role=navigation]{
 	display: none;
 	width: 260px;
 	position: absolute;
-	left: -20px;
+	left: 0px;
 	border-top: none !important;
-	background-color: #fff;
+	background-color: $primaryColor;
 	font-size: em(14);
 	li{
 		display: block !important;
@@ -86,6 +86,9 @@ nav[role=navigation]{
 			}
 		}
 	}
+}
+.sub-menu:last-of-type{
+	width: 150px;
 }
 .menu-item-has-children:hover,
 .menu-item-has-children:focus{
