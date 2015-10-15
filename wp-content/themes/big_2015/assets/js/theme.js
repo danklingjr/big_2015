@@ -67,6 +67,7 @@ $(document).ready(function() {
 		itemsMobile : [600,1],
 		pagination : true,
 		paginationNumbers: false,
+		singleItem : true,
 		transitionStyle : "backSlide"
 	});
 
