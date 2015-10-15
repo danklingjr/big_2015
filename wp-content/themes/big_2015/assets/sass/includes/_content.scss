@@ -313,7 +313,8 @@ body{
 	.button{
 		min-width: 175px;
 		position: absolute;
-		left: 50%;
+    	left: 50%;
+    	bottom: -24px;
 		transform: translatex(-50%);
 	}
 	// &:hover,
