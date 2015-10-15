@@ -32,8 +32,8 @@ function hero_content()
 
 <section class="hero overview-slider hero--overview">
 	<?php
-	if(have_rows('slide')):
-	while(have_rows('slide')): the_row();
+	if(have_rows('slide')) :
+	while(have_rows('slide')) : the_row();
 	$image = get_sub_field('slide_image');
 	if( !empty($image) ):
 	$url = $image['url'];
@@ -42,10 +42,8 @@ function hero_content()
 	$caption = $image['caption'];
 
 	// thumbnail
-	$size = 'full';
+	$size = 'large';
 	$thumb = $image['sizes'][ $size ];
-	$width = $image['sizes'][ $size . '-width' ];
-	$height = $image['sizes'][ $size . '-height' ];
 	?>
 	<div class="slide" style="background-image: url(<?php echo $thumb; ?>);">
 		<div>
