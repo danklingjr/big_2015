@@ -53,7 +53,7 @@ function hero_content()
 			<!-- <span>There's A</span>
 			<b>BIG</b>
 			<span>Difference</span> -->
-			<b><?php  ?></b>
+			<b><?php the_sub_field('slide_text'); ?></b>
 		</h2>
 
 		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
