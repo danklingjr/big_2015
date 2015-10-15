@@ -63,10 +63,10 @@ $(document).ready(function() {
 		paginationNumbers: false,
 	});
 	$('.overview-slider').owlCarousel({
+		items : 1,
+		itemsMobile : [600,1],
 		pagination : true,
 		paginationNumbers: false,
-		singleItem : true,
-		transitionStyle : "backSlide"
 	});
 
 	$('.contact__dropdown').on('click', function(){
