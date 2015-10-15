@@ -70,7 +70,6 @@ $(document).ready(function() {
 	});
 
 	$('.contact__dropdown').on('click', function(){
-		$(this).find('.arrow').toggleClass('rotate-animate');
 		$('.contact__dropdown--form').toggle();
 	});
 });
