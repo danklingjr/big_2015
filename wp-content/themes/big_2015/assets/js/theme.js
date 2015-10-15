@@ -67,7 +67,7 @@ $(document).ready(function() {
 		itemsMobile : [600,1],
 		pagination : true,
 		paginationNumbers: false,
-		transitionStyle : "fade"
+		transitionStyle : "backSlide"
 	});
 
 	$('.contact__dropdown').on('click', function(){
