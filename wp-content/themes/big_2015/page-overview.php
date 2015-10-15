@@ -212,7 +212,84 @@ function site_content()
 <section class="overview__partners group">
 	<h2>Our Trusted Wireless Partners Include:</h2>
 	<div class="partner__wrap group">
-		<figure class="partner--logo">
+		<?php if(is_page('6')){ ?>
+			<?php 
+			// $post_list = array(50,56,44,54,48,46,52);
+			query_posts(array(
+			    'showposts' => 3, 
+			    'cat' => 5,
+			    'post_type' => 'partner')); 
+			while (have_posts()) { the_post(); 
+			$logo = get_field('partner_logo');
+			if( !empty($logo) ):
+			$logourl = $logo['url'];
+			$logotitle = $logo['title'];
+			$logoalt = $logo['alt'];
+			$logocaption = $logo['caption'];
+
+			// thumbnail
+			$logosize = 'large';
+			$logothumb = $logo['sizes'][ $size ];
+			?>
+			<figure class="partner--logo">
+				<img src="<?php echo $thumb; ?>" alt="">
+			</figure>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		<?php }else if(is_page('8')){?>
+			<?php 
+			// $post_list = array(50,56,44,54,48,46,52);
+			query_posts(array(
+			    'showposts' => 3, 
+			    'cat' => 7,
+			    'post_type' => 'partner')); 
+			while (have_posts()) { the_post(); 
+			$logo = get_field('partner_logo');
+			if( !empty($logo) ):
+			$logourl = $logo['url'];
+			$logotitle = $logo['title'];
+			$logoalt = $logo['alt'];
+			$logocaption = $logo['caption'];
+
+			// thumbnail
+			$logosize = 'large';
+			$logothumb = $logo['sizes'][ $size ];
+			?>
+			<figure class="partner--logo">
+				<img src="<?php echo $thumb; ?>" alt="">
+			</figure>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		<?php }else if(is_page('10')){?>
+			<?php 
+			// $post_list = array(50,56,44,54,48,46,52);
+			query_posts(array(
+			    'showposts' => 3, 
+			    'cat' => 6,
+			    'post_type' => 'partner')); 
+			while (have_posts()) { the_post(); 
+			$logo = get_field('partner_logo');
+			if( !empty($logo) ):
+			$logourl = $logo['url'];
+			$logotitle = $logo['title'];
+			$logoalt = $logo['alt'];
+			$logocaption = $logo['caption'];
+
+			// thumbnail
+			$logosize = 'large';
+			$logothumb = $logo['sizes'][ $size ];
+			?>
+			<figure class="partner--logo">
+				<img src="<?php echo $thumb; ?>" alt="">
+			</figure>
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
+			</figure>
+			<?php } ?>
+			<?php wp_reset_query(); ?>
+		<?php }?>
+
+
+		<!-- <figure class="partner--logo">
 			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
 		</figure>
 		<figure class="partner--logo">
@@ -238,10 +315,7 @@ function site_content()
 		</figure>
 		<figure class="partner--logo">
 			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
-		</figure>
-		<figure class="partner--logo">
-			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/alvarion.jpg" alt="">
-		</figure>
+		</figure> -->
 	</div>
 </section>
 
