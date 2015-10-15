@@ -51,12 +51,26 @@ $(document).ready(function() {
 	// owl.trigger('owl.stop');
 	// })
 	
-	$('.partner__wrap').owlCarousel();
+	$('.partner__wrap').owlCarousel({
+		pagination : false,
+		navigation : true,
+		navigationText : ["&lsaquo;","&rsaquo;"]
+	});
 	$('.testimonial__wrap').owlCarousel({
 		items : 1,
 		itemsMobile : [600,1],
 		pagination : true,
 		paginationNumbers: false,
 	});
+	$('.overview-slider').owlCarousel({
+		items : 1,
+		itemsMobile : [600,1],
+		pagination : true,
+		paginationNumbers: false,
+	});
 
+	$('.contact__dropdown').on('click', function(){
+		$(this).find('.arrow').toggleClass('rotate-animate');
+		$('.contact__dropdown--form').toggle();
+	});
 });

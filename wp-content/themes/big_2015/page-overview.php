@@ -29,14 +29,44 @@ function hero_content()
 <div class="header__push">
 	
 </div>
-<section class="hero hero--overview">
-	<div>
+<?php 
+$featured_id = get_post_thumbnail_id();
+$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
+$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
+?>
+<section class="hero overview-slider hero--overview">
+	<div class="slide" style="background-image: url(<?php echo $featured_large[0]; ?>);">
+		<div>
 		<h1>
 			<span>There's A</span>
 			<b>BIG</b>
 			<span>Difference</span>
 		</h1>
+
 		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
+		</div>
+	</div>
+	<div class="slide" style="background-image: url(<?php echo $featured_large[0]; ?>);">
+		<div>
+		<h1>
+			<span>There's A</span>
+			<b>BIG</b>
+			<span>Difference</span>
+		</h1>
+
+		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
+		</div>
+	</div>
+	<div class="slide" style="background-image: url(<?php echo $featured_large[0]; ?>);">
+		<div>
+		<h1>
+			<span>There's A</span>
+			<b>BIG</b>
+			<span>Difference</span>
+		</h1>
+
+		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
+		</div>
 	</div>
 </section>
 
@@ -63,8 +93,48 @@ function site_content()
 			<p>Contact Big <span class="arrow">&rsaquo;</span></p>
 		</div>
 		<div class="request__eval col-9">
-			<span>NOT SURE WHAT TYPE OF HELP YOU NEED?</span>
-			<span>Request and evaluation now <span class="arrow">&rsaquo;</span></span>
+			<p><span>NOT SURE WHAT TYPE OF HELP YOU NEED?</span>
+			<span>Request and evaluation now <span class="arrow">&rsaquo;</span></span></p>
+			
+		</div>
+	</div>
+	<div class="contact__dropdown--form group">
+		<p class="contact__text col-3">Contact BIG with your questions or comments about your IT needs so you can get the service you deserve.</p>
+		<div class="form__wrap col-9 group">
+			<form action="" method="post">
+				<div class="dropdown col-4">
+					<span>I am contacting in reference to...</span>
+					<ul>
+						<li>option 1</li>
+						<li>option 2</li>
+						<li>option 3</li>
+						<li>option 4</li>
+					</ul>
+				</div>
+				<div class="input col-4">
+					<input type="text" name="" placeholder="First Name" value="">
+				</div>
+				<div class="input col-4">
+					<input type="text" name="" placeholder="Last Name" value="">
+				</div>
+
+				<div class="input col-4">
+					<input type="text" name="" placeholder="Company Name" value="">
+				</div>
+				<div class="input col-4">
+					<input type="text" name="" placeholder="Phone Number" value="">
+				</div>
+				<div class="input col-4">
+					<input type="text" name="" placeholder="Email" value="">
+				</div>
+
+				<div class="input col-8">
+					<input type="text" name="" placeholder="Comments" value="">
+				</div>
+				<div class="input input--submit col-4">
+					<button class="button button--hero">Submit <span>&rsaquo;</span></button>
+				</div>
+			</form>
 		</div>
 	</div>
 
