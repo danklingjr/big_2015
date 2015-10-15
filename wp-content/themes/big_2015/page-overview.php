@@ -180,7 +180,6 @@ function site_content()
 			while (have_posts()) { the_post(); 
 			?>
 			<div class="testimonial">
-				<h2>What our customers are saying</h2>
 				<?php the_content(); ?>
 				<b>- <?php the_title(); ?> -</b>
 				<i><?php the_field('company_name'); ?></i>
@@ -197,7 +196,6 @@ function site_content()
 			while (have_posts()) { the_post(); 
 			?>
 			<div class="testimonial">
-				<h2>What our customers are saying</h2>
 				<?php the_content(); ?>
 				<b>- <?php the_title(); ?> -</b>
 				<i><?php the_field('company_name'); ?></i>
