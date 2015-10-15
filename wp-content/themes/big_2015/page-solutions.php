@@ -29,7 +29,12 @@ function hero_content()
 <div class="header__push">
 	
 </div>
-<section class="hero hero--page">
+<?php 
+$featured_id = get_post_thumbnail_id();
+$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
+$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
+?>
+<section class="hero hero--page" style="background-image: url(<?php echo $featured_large[0]; ?>);">
 	<div>
 		<h1>
 			<span>
@@ -53,6 +58,7 @@ function site_content()
 
 <section class="solutions group">
 	<div class="partners__wrap group">
+
 	<?php 
 		if (have_rows('solution')): 
 		while(have_rows('solution')): the_row();
@@ -70,37 +76,6 @@ function site_content()
 		endwhile;
 		endif;
 	?>
-
-		<!-- <div class="solution group">
-			<figure class="solution__logo">
-				<img src="" alt="">
-			</figure>
-			<div class="solution__text">
-				<h3>Engineer</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-			</div>
-		</div>
-
-		<div class="solution group">
-			<figure class="solution__logo">
-				<img src="" alt="">
-			</figure>
-			<div class="solution__text">
-				<h3>Install</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-			</div>
-		</div>
-
-		<div class="solution group">
-			<figure class="solution__logo">
-				<img src="" alt="">
-			</figure>
-			<div class="solution__text">
-				<h3>Maintain</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dui aliquet, vestibulum mauris vitae, luctus arcu. Nullam vitae dictum risus. Donec quis efficitur magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor tellus sed quam gravida pretium. Sed ut gravida enim, vel gravida nibh. Proin eget iaculis neque. Ut ligula odio, pharetra sit amet volutpat non, auctor vel quam.</p>
-			</div>
-		</div> -->
-
 
 	</div>
 	<hr>

@@ -21,6 +21,16 @@ function elog($x){
     error_log($contents);
 }
 
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+add_action( 'after_setup_theme', 'vanguard_setup' );
+function vanguard_setup() {
+  add_image_size( 'large-thumb', 500, 500, array( 'center', 'center' ) );
+}
 
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
@@ -49,3 +59,5 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
 	else 
                return false;  // we're elsewhere
 };
+
+acf_add_options_page();

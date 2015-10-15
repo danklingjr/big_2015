@@ -29,7 +29,12 @@ function hero_content()
 <div class="header__push">
 	
 </div>
-<section class="hero hero--page about--page">
+<?php 
+$featured_id = get_post_thumbnail_id();
+$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
+$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
+?>
+<section class="hero hero--page about--page" style="background-image: url(<?php echo $featured_large[0]; ?>);">
 	<div>
 		<h1>
 			<b><?php the_title(); ?></b>
@@ -45,77 +50,49 @@ function site_content()
 ?>
 
 <section class="page__overview group">
-	<h2><b>Who We</b> Are</h2>
-	<p>Headquartered in Central PA, Business Information Group is a customer-oriented IT consulting firm employing over 50 people. Established in 1992, BIG has grown with the technology boom and has been a leader in wireless networking. Today, BIG continues to listen to the client and specializes in applying the correct technologies to meet their requirements.</p>
+	<?php the_field('intro_text', 'option'); ?>
 </section>
 
 <section class="history group">
 	<div class="left-side">
-		<h2><b>BIG</b> History</h2>
-		<p>John and Scott Dolmetsch grew up during the PC revolution, and started programming computers in the early 1980’s. What started out as two brothers tinkering around in their basement and networking with friends soon became a bona fide business, offering a “one stop technology shop.” Business Information Group incorporated in the state of Pennsylvania on January 10, 1992, providing expertise across the technology and communications arenas to York County businesses. In the years since, both brothers continue to run at full throttle ahead, and their vision has managed to evolve as rapidly as the technology field.</p>
-		<p>In 1998, years ahead of the industry curve, BIG focused attention on wireless broadband, or WiFi. BIG helped develop a community network that connected York county schools, libraries, and non-profit groups for low-cost, high-speed Internet access. In 2005, BIG Wireless, a wholly-owned subsidiary, was created to specialize in wireless broadband projects but benefit from BIG’s in-house expertise in related disciplines. Since then, BIG Wireless has engineered and installed hundreds of broadband networks in far-flung locations including Cleveland, OH, Miami, FL, Montgomery, AL and Cheyenne, WY. While BIG Wireless has sustained technical know-how for mid-size enterprises, it has also gained valuable experience on large-scale national projects through subcontracting relationships with respected systems integrators including IBM and Alcatel Lucent.</p>
-		<p>In 2000, BIG created a climate-controlled data center at their downtown York facility, which houses servers and hosts websites for several businesses in the region. Later, BIG built the first “carrier-class” wireless voice and data network in Pennsylvania, which provides high speed connectivity at affordable rates to businesses in York County. Antennas are positioned to allow access by approximately 75% of York County businesses, and a new location within the service area can be up and running quickly. Outdoor grade radios provide access around the clock for companies that require their information anywhere, anytime. One of BIG’s major clients is a York County construction firm that relies on laptop computers and wireless communications to capture data in the field for real-time decision making.</p>
+		<?php the_field('left_side', 'option'); ?>
 	</div>
 	<div class="right-side">
-		<figure>
-			
-		</figure>
-		<p>BIG has always prided itself on its customer-oriented employees, now numbering more than 50. No matter how large or small they are, or where they need help, all BIG clients have around-the-clock access to the company’s technical support staff. The early roster of on-call technicians carrying pagers grew in 2005 into a 24/7 Network Operations Center. The NOC staff monitors more than 1000 devices owned by dozens of supported clients. Additionally, the NOC has access to several other client networks for remote troubleshooting, and provides case management and dispatch support for a mobile broadband network for commercial and business aviation nationwide.</p>
-		<p>BIG continues to be an authorized provider and certified partner for numerous vendors including Cisco, HP, Compaq, IBM, Lenovo, Microsoft, and Novell. BIG Wireless partners include Alvarion, Motorola, Ceragon, BridgeWave, Tropos, Belaire, and Nera.</p>
+		<?php the_field('right_side', 'option'); ?>
 	</div>
 </section>
 
 <section class="our-team group">
 	<h2><b>Our</b> Team</h2>
 	<div class="team__wrap group">
+		<?php
+		if (have_rows('staff_member', 'option')) :
+		while(have_rows('staff_member', 'option')) : the_row();
+		$image = get_sub_field('image', 'option');
+		if( !empty($image) ):
+		$url = $image['url'];
+		$title = $image['title'];
+		$alt = $image['alt'];
+		$caption = $image['caption'];
+
+		// thumbnail
+		$size = 'large-thumb';
+		$thumb = $image['sizes'][ $size ];
+		$width = $image['sizes'][ $size . '-width' ];
+		$height = $image['sizes'][ $size . '-height' ];
+		?>
 		<div class="team__member col-3">
-			
+			<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>">
+			<div class="team__details">
+				<h3><?php the_sub_field('name','option'); ?></h3>
+				<p><?php the_sub_field('title','option'); ?></p>
+			</div>
 		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
-		<div class="team__member col-3">
-			
-		</div>
+		<?php 
+		endif;
+		endwhile;
+		endif;
+		?>
 	</div>
 	<hr>
 	<p class="cta-text">Are you interested in a partnership with BIG?</p>

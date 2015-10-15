@@ -29,7 +29,12 @@ function hero_content()
 <div class="header__push">
 	
 </div>
-<section class="hero hero--page">
+<?php 
+$featured_id = get_post_thumbnail_id();
+$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
+$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
+?>
+<section class="hero hero--page" style="background-image: url(<?php echo $featured_large[0]; ?>);">
 	<div>
 		<h1>
 			<span>
@@ -98,72 +103,90 @@ function site_content()
 			$parent_title = get_the_title($page->post_parent);
 			echo $parent_title;
 			?></h2>
+		<?php if (is_tree(6)) {?>
+	    
+		<?php
+		if (have_rows('wireless_technologies', 'option')) :
+		while(have_rows('wireless_technologies', 'option')) : the_row();
+		?>
 		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
+			<h3><?php the_sub_field('name', 'option'); ?></h3>
+			<p><?php the_sub_field('title', 'option'); ?></p>
+			<p><?php the_sub_field('email', 'option'); ?></p>
 		</div>
+		<?php 
+		endwhile;
+		endif;
+		?>
+
+	    <?php } else if (is_tree(8)) {?>
+	    
+		<?php
+		if (have_rows('networking_security', 'option')) :
+		while(have_rows('networking_security', 'option')) : the_row();
+		?>
 		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
+			<h3><?php the_sub_field('name', 'option'); ?></h3>
+			<p><?php the_sub_field('title', 'option'); ?></p>
+			<p><?php the_sub_field('email', 'option'); ?></p>
 		</div>
+		<?php 
+		endwhile;
+		endif;
+		?>
+
+	    <?php } else if (is_tree(10)) {?>
+	    
+		<?php
+		if (have_rows('software_development', 'option')) :
+		while(have_rows('software_development', 'option')) : the_row();
+		?>
 		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
+			<h3><?php the_sub_field('name', 'option'); ?></h3>
+			<p><?php the_sub_field('title', 'option'); ?></p>
+			<p><?php the_sub_field('email', 'option'); ?></p>
 		</div>
+		<?php 
+		endwhile;
+		endif;
+		?>
+
+	    <?php } ?>
+		
 	</div>
 	<div class="contact--group col-4">
 		<h2>Corporate</h2>
+		<?php
+		if (have_rows('corporate', 'option')) :
+		while(have_rows('corporate', 'option')) : the_row();
+		?>
 		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
+			<h3><?php the_sub_field('name', 'option'); ?></h3>
+			<p><?php the_sub_field('title', 'option'); ?></p>
+			<p><?php the_sub_field('email', 'option'); ?></p>
 		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
+		<?php 
+		endwhile;
+		endif;
+		?>
+
 	</div>
 	<div class="contact--group col-4">
 		<h2>Support</h2>
+		<?php
+		if (have_rows('support', 'option')) :
+		while(have_rows('support', 'option')) : the_row();
+		?>
 		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
+			<h3><?php the_sub_field('name', 'option'); ?></h3>
+			<p><?php the_sub_field('title', 'option'); ?></p>
+			<p><?php the_sub_field('email', 'option'); ?></p>
 		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
-		<div class="contact">
-			<h3>Name Name</h3>
-			<p>VP of Showing a Long Job Title</p>
-			<p>namename@bigwireless.net</p>
-		</div>
+		<?php 
+		endwhile;
+		endif;
+		?>
+
 	</div>
 </section>
 

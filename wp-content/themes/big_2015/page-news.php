@@ -29,7 +29,12 @@ function hero_content()
 <div class="header__push">
 	
 </div>
-<section class="hero hero--page">
+<?php 
+$featured_id = get_post_thumbnail_id();
+$featured_url = wp_get_attachment_image_src($featured_id,'large', true); 
+$featured_large = wp_get_attachment_image_src($featured_id,'full', true);
+?>
+<section class="hero hero--page" style="background-image: url(<?php echo $featured_large[0]; ?>);">
 	<div>
 		<h1>
 			<span>
