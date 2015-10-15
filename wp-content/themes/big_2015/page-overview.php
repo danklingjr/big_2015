@@ -60,6 +60,7 @@ function hero_content()
 		</div>
 	</div>
 	<?php
+	endif;
 	endwhile;
 	endif;
 	?>
