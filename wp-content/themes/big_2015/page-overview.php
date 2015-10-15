@@ -47,12 +47,8 @@ function hero_content()
 	?>
 	<div class="slide" style="background-image: url(<?php echo $thumb; ?>);">
 		<div>
-		<h2>
-			<!-- <span>There's A</span>
-			<b>BIG</b>
-			<span>Difference</span> -->
-			<b><?php the_sub_field('slide_text'); ?></b>
-		</h2>
+
+		<?php the_sub_field('slide_text'); ?>
 
 		<a href="" class="button button--hero">Learn More <span>&rsaquo;</span></a>
 		</div>
